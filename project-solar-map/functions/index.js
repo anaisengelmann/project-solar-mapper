@@ -22,11 +22,17 @@ app.get("/api", (req, res) => {
 app.post("/api/generateDiagram", (req, res) => {
   const manufacturer = req.body.inManufacturer;
   const country = req.body.inCountry;
+  const volume = req.body.inVolume;
+  const mass = req.body.inMass;
+  const toggle = req.body.isToggled;
   console.log(manufacturer);
   console.log(country);
+  console.log(volume);
+  console.log(mass);
+  console.log(toggle);
 
   let options = {
-    args: [manufacturer, country],
+    args: [manufacturer, country, volume, mass],
     scriptPath: "../my-app/public/",
   };
 
