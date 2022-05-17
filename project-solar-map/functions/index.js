@@ -24,15 +24,30 @@ app.post("/api/generateDiagram", (req, res) => {
   const country = req.body.inCountry;
   const volume = req.body.inVolume;
   const mass = req.body.inMass;
-  const fit = req.body.isToggled;
+  const fit = req.body.isFitToggled;
+  const fitAmount = req.body.inFitAmount;
+  const recycler = req.body.isRecyclerToggled;
+  const recyclerAmount = req.body.inRecyclerAmount;
   console.log(manufacturer);
   console.log(country);
   console.log(volume);
   console.log(mass);
   console.log(fit);
+  console.log(fitAmount);
+  console.log(recycler);
+  console.log(recyclerAmount);
 
   let options = {
-    args: [manufacturer, country, volume, mass, fit],
+    args: [
+      manufacturer,
+      country,
+      volume,
+      mass,
+      fit,
+      fitAmount,
+      recycler,
+      recyclerAmount,
+    ],
     scriptPath: "../my-app/public/",
   };
 
