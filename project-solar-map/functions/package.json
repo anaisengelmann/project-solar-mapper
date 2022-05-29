@@ -9,7 +9,6 @@
     "logs": "firebase functions:log",
     "my-app": "cd ../my-app && npm start",
     "dev": "concurrently \"nodemon index.js\" \"npm run my-app\""
-
   },
   "engines": {
     "node": "16"
@@ -19,7 +18,9 @@
     "express": "^4.18.1",
     "firebase-admin": "^10.0.2",
     "firebase-functions": "^3.18.0",
-    "python-shell": "^3.0.1"
+    "python-shell": "^3.0.1",
+    "react-places-autocomplete": "^7.3.0",
+    "recompose": "^0.30.0"
   },
   "devDependencies": {
     "firebase-functions-test": "^0.2.0"

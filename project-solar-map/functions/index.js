@@ -28,6 +28,12 @@ app.post("/api/generateDiagram", (req, res) => {
   const fitAmount = req.body.inFitAmount;
   const recycler = req.body.isRecyclerToggled;
   const recyclerAmount = req.body.inRecyclerAmount;
+  const displayToggle = req.body.isDisplayToggled;
+  const materialSelect = req.body.isMaterialSelect;
+  const panelAge = req.body.inAge;
+  const recycleOption = req.body.isRecycleOptionSelect;
+  const refurbish = req.body.isRefurbishToggled;
+  const externalRefurbish = req.body.isExternalRefurbishToggled;
   console.log(manufacturer);
   console.log(country);
   console.log(volume);
@@ -36,6 +42,12 @@ app.post("/api/generateDiagram", (req, res) => {
   console.log(fitAmount);
   console.log(recycler);
   console.log(recyclerAmount);
+  console.log(displayToggle);
+  console.log(materialSelect);
+  console.log(panelAge);
+  console.log(recycleOption);
+  console.log(refurbish);
+  console.log(externalRefurbish);
 
   let options = {
     args: [
@@ -47,6 +59,12 @@ app.post("/api/generateDiagram", (req, res) => {
       fitAmount,
       recycler,
       recyclerAmount,
+      displayToggle,
+      materialSelect,
+      panelAge,
+      recycleOption,
+      refurbish,
+      externalRefurbish,
     ],
     scriptPath: "../my-app/public/",
   };
